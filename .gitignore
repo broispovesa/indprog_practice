@@ -37,6 +37,7 @@
 *.exe
 *.out
 *.app
+a.out
 
 # Build directories
 build/
