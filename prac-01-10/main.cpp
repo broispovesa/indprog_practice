@@ -35,6 +35,7 @@ int second() {
   } else {
     cout << pol_c << ' ' << pol_s << endl;
   }
+  return 0;
 }
 
 int third() {
@@ -53,6 +54,7 @@ int third() {
     }
   }
   cout << m_num << ' ' << m_ind << endl;
+  return 0;
 }
 
 int fourth() {
