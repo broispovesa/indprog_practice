@@ -1,15 +1,34 @@
 #include <iostream>
 #include <random>
+#include <tuple>
+#include <vector>
 
 using namespace std;
+
+// доделать соседей https://habr.com/ru/articles/849894/
+// int neighbors(char matr, int row, int col){
+//   vector<tuple<int, int>> dirs;
+//   dirs.push_back(make_tuple(-1, 0));
+//   dirs.push_back(make_tuple(1, 0));
+//   dirs.push_back(make_tuple(0, 1));
+//   dirs.push_back(make_tuple(0, -1));
+//   dirs.push_back(make_tuple(-1, -1));
+//   dirs.push_back(make_tuple(-1, 1));
+//   dirs.push_back(make_tuple(1, -1));
+//   dirs.push_back(make_tuple(1, 1));
+//   for(int i = 0; i < 8; i++){
+//     int dr = std::get<0>dirs[i];
+
+//   }
+// }
 
 int main() {
   random_device rd;  // берем случайное число из операционной системы
   mt19937 gen(rd()); // используем это случайное число как сид для
                      // псевдослучайного генератора mt19937
   uniform_int_distribution<int> distrib(
-      1, 10); // равномерное_целыхчисел_распределение <результат должен быть
-              // целым> имя_нашего_объекта(граница, граница)
+      0, 9); // равномерное_целыхчисел_распределение <результат должен быть
+             // целым> имя_нашего_объекта(граница, граница)
   char matrix[10][10] = {'0'};
   int k = 0;
   while (k <= 33) {
@@ -37,4 +56,5 @@ int main() {
     }
     cout << endl;
   }
+  char open_matrix[10][10] = {0}; // то, что видит игрок
 }
